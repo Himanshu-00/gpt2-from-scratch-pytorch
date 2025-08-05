@@ -33,9 +33,10 @@ This repository contains a complete **implementation of the GPT architecture** i
 ```bash
 git clone https://github.com/Himanshu-00/gpt2-from-scratch-pytorch.git
 cd gpt2-from-scratch-pytorch
-pip install -r requirements.txt
+pip install -r requirements.txt```
 
-## Inference
+## Installation
+
 ```bash
 python inference.py
 
