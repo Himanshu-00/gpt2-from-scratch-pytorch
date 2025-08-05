@@ -1,4 +1,4 @@
-# GPT-2 from Scratch in PyTorch 🧠🔥
+# GPT-2 from Scratch in PyTorch
 
 This repository contains a complete **implementation of the GPT architecture** in **PyTorch**, built entirely from scratch.
 
