@@ -12,8 +12,6 @@ def token_ids_to_text(token_ids, tokenizer):
     flat = token_ids.squeeze(0)  # remove batch dimension
     return tokenizer.decode(flat.tolist())
 
-
-
 def generate(model, idx, max_new_tokens, context_size, temperature=0.0, top_k=None, eos_id=None):
     for step in range(max_new_tokens):
         idx_cond = idx[:, -context_size:]
