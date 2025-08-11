@@ -1,0 +1,6 @@
+train.py
+data.py
+alpaca_data.json
+loss-plot 2.pdf
+loss-plot.pdf
+model-gpt2-medium.safetensors
