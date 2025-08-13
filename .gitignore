@@ -1,10 +1,7 @@
-train.py
 data.py
 train_test.py
 alpaca_data.json
 instruction-data.json
 fine_tune_200.json
-loss-plot 2.pdf
-loss-plot.pdf
 model-gpt2-medium.safetensors
 gpt2-medium355M-sft.safetensors
