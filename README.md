@@ -51,4 +51,9 @@ python3 train.py
 🔹 Fine-Tuning Notebook & Inference → [Google colab](https://colab.research.google.com/drive/1BrpBqLnS2Gy5fhIaT3lTVJqQYtp6580r?usp=sharing)
 
 
+## A huge thanks to the following open-source projects that inspired and guided this work:  
+- [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch.git)  
+- [openai/gpt-2](https://github.com/openai/gpt-2)  
+
+
 
