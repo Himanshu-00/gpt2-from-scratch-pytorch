@@ -200,7 +200,7 @@ def test_model_capabilities(model, tokenizer, device, base_cfg):
 
 def main():
     # Path to your safetensors checkpoint
-    checkpoint_path = "model-gpt2-medium.safetensors"
+    checkpoint_path = "gpt2-medium355M-sft.safetensors"
 
     example =  ["Give an example of a metaphor that uses the following object: Stars",
               "Rewrite the following sentence in the third person: I am anxious"]
