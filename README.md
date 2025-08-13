@@ -36,12 +36,6 @@ cd gpt2-from-scratch-pytorch
 pip install -r requirements.txt
 ```
 
-## Inference
-```bash
-python inference.py
-```
-
-
 ## Usage
 #### Run Inference
 ```bash

@@ -176,6 +176,8 @@ def interactive_chat(model, tokenizer, device, base_cfg, model_type, debug=False
 
 def test_model_capabilities(model, tokenizer, device, base_cfg):
     """Test the model with various prompts"""
+    # Detect model type
+    model_type = 'fine-tuned'
     test_prompts = [
         "Rewrite 'He installed the software' in passive voice",
         "Convert 'The book was written by her' to active voice", 
@@ -190,7 +192,7 @@ def test_model_capabilities(model, tokenizer, device, base_cfg):
     print("=" * 50)
     
     for prompt in test_prompts:
-        response = chat_with_model(prompt, model, tokenizer, device, base_cfg)
+        response = chat_with_model(prompt, model, tokenizer, device, base_cfg, model_type)
         print(f"\n💬 Prompt: {prompt}")
         print(f"🤖 Response: {response}")
         print("-" * 30)
@@ -198,7 +200,10 @@ def test_model_capabilities(model, tokenizer, device, base_cfg):
 
 def main():
     # Path to your safetensors checkpoint
-    checkpoint_path = "gpt2-medium355M-sft.safetensors"
+    checkpoint_path = "model-gpt2-medium.safetensors"
+
+    example =  ["Give an example of a metaphor that uses the following object: Stars",
+              "Rewrite the following sentence in the third person: I am anxious"]
 
     ext = os.path.splitext(checkpoint_path)[1].lower()
     if ext == ".safetensors":
@@ -256,11 +261,11 @@ def main():
         test_model_capabilities(gpt, tokenizer, device, base_cfg)
     elif choice == "3":
         user_prompt = input("\nEnter your prompt: ")
-        response = chat_with_model(user_prompt, gpt, tokenizer, device, base_cfg)
+        response = chat_with_model(user_prompt, gpt, tokenizer, device, base_cfg, model_type)
         print(f"\n🤖 Response: {response}")
     else:
         print("Invalid choice, starting interactive chat...")
-        interactive_chat(gpt, tokenizer, device, base_cfg)
+        interactive_chat(gpt, tokenizer, device, base_cfg, model_type)
 
     # # Your prompt
     # prompt_text = "Hello!!1"
